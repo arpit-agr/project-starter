@@ -219,19 +219,19 @@
 					>.
 				</p>
 				<p>
-					<code>kbd</code>: Check out
+					Check out
 					<a
 						href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/kbd#examples"
 					>
-						&lt;kbd&gt; examples on MDN
+						<code>kbd</code> examples on MDN
 					</a>
 				</p>
 				<p>
-					<code>samp</code>: Check out
+					Check out
 					<a
 						href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/samp#examples"
 					>
-						&lt;samp&gt; examples on MDN
+						<code>samp</code> examples on MDN
 					</a>
 				</p>
 				<p>
@@ -240,9 +240,11 @@
 					your user ID.
 				</p>
 				<p>
-					<code>meter</code> and <code>progress</code>: Usage:
+					<code>meter</code>
 					<meter value="6" max="8">6 blocks used (out of 8 total)</meter>
-					Progress: <progress value="37" max="100">37%</progress>
+				</p>
+				<p>
+					<code>progress</code> <progress value="37" max="100">37%</progress>
 				</p>
 				<p>
 					<code>sub</code> is used for subscripts: H<sub>2</sub>O.
@@ -353,9 +355,9 @@
 				<form
 					class="grid-auto"
 					style="
-						--grid-item-min: 16em;
+						--grid-item-min: 15em;
 						--grid-gap: var(--space-l);
-						--stack-gap: var(--space-2xs-xs);
+						--stack-gap: var(--space-2xs);
 					"
 				>
 					<div class="stack">
@@ -383,6 +385,14 @@
 						<input type="text" id="example-input-text" />
 					</div>
 					<div class="stack">
+						<label for="example-input-url">URL</label>
+						<input type="url" id="example-input-url" />
+					</div>
+					<div class="stack">
+						<label for="example-input-file">File input</label>
+						<input type="file" id="example-input-file" />
+					</div>
+					<div class="stack">
 						<label for="example-input-readonly">Read-only</label>
 						<input
 							type="text"
@@ -401,8 +411,8 @@
 						/>
 					</div>
 					<div class="stack">
-						<label for="example-input-url">URL</label>
-						<input type="url" id="example-input-url" />
+						<label for="example-input-time">Time</label>
+						<input type="time" id="example-input-time" />
 					</div>
 					<div class="stack">
 						<label for="example-input-date">Date</label>
@@ -425,14 +435,6 @@
 						<input type="week" id="example-input-week" />
 					</div>
 					<div class="stack">
-						<label for="example-input-time">Time</label>
-						<input type="time" id="example-input-time" />
-					</div>
-					<div class="stack">
-						<label for="example-input-file">File input</label>
-						<input type="file" id="example-input-file" />
-					</div>
-					<div class="stack">
 						<label for="example-input-color">Color</label>
 						<input type="color" id="example-input-color" />
 					</div>
@@ -446,7 +448,7 @@
 							value="3"
 						/>
 					</div>
-					<div class="stack">
+					<!--<div class="stack">
 						<label for="example-select1">Select</label>
 						<select id="example-select1">
 							<option>1</option>
@@ -455,8 +457,8 @@
 							<option>4</option>
 							<option>5</option>
 						</select>
-					</div>
-					<div class="stack">
+					</div>-->
+					<!--<div class="stack">
 						<label for="example-select1a">Select with size</label>
 						<select id="example-select1a" size="2">
 							<option>1</option>
@@ -465,17 +467,7 @@
 							<option>4</option>
 							<option>5</option>
 						</select>
-					</div>
-					<div class="stack">
-						<label for="example-select2">Multiple select</label>
-						<select multiple id="example-select2">
-							<option>1</option>
-							<option>2</option>
-							<option>3</option>
-							<option>4</option>
-							<option>5</option>
-						</select>
-					</div>
+					</div>-->
 					<div class="stack">
 						<label for="example-optgroup">Select with optgroup</label>
 						<select id="example-optgroup">
@@ -490,6 +482,16 @@
 						</select>
 					</div>
 					<div class="stack">
+						<label for="example-select2">Multiple select</label>
+						<select multiple id="example-select2">
+							<option>1</option>
+							<option>2</option>
+							<option>3</option>
+							<option>4</option>
+							<option>5</option>
+						</select>
+					</div>
+					<!--<div class="stack">
 						<label for="example-optgroup2">Select with optgroup and size</label>
 						<select id="example-optgroup2" size="2">
 							<optgroup label="Vegetarian">
@@ -501,8 +503,8 @@
 								<option>Roast Beef</option>
 							</optgroup>
 						</select>
-					</div>
-					<div class="stack">
+					</div>-->
+					<!--<div class="stack">
 						<label for="example-optgroup3">Multiple select with optgroup</label>
 						<select id="example-optgroup3" multiple>
 							<optgroup label="Ground">
@@ -518,16 +520,15 @@
 								<option>Balloon</option>
 							</optgroup>
 						</select>
-					</div>
-					<div class="stack">
+					</div>-->
+					<div class="stack" style="grid-column: 1/-1">
 						<label for="example-textarea">Textarea</label>
 						<textarea
 							id="example-textarea"
-							rows="3"
 							style="flex-grow: 999; align-self: stretch"
 						></textarea>
 					</div>
-					<fieldset>
+					<fieldset class="stack" style="grid-column: 1/-1">
 						<legend>I am legend</legend>
 						<div>
 							<input
@@ -564,8 +565,17 @@
 							/>
 							<label for="option-radio3">Option three is disabled</label>
 						</div>
+						<style>
+							@scope {
+								div {
+									display: grid;
+									grid-template-columns: auto 1fr;
+									align-items: first baseline;
+								}
+							}
+						</style>
 					</fieldset>
-					<fieldset>
+					<fieldset class="stack" style="grid-column: 1/-1">
 						<legend>I am also legend</legend>
 						<div>
 							<input type="checkbox" id="checkbox1" />
@@ -578,10 +588,10 @@
 					</fieldset>
 					<div class="cluster" style="grid-column: 1/-1">
 						<button type="button" name="button">Button</button>
-						<input type="button" name="input" value="Input Button" />
-						<input type="submit" name="submit" value="Input Submit" />
+						<!--<input type="button" name="input" value="Input Button" />
+						<input type="submit" name="submit" value="Input Submit" />-->
 						<button type="submit" name="submit2">Submit</button>
-						<input type="reset" name="reset" value="Input Reset" />
+						<!--<input type="reset" name="reset" value="Input Reset" />-->
 						<button type="reset" name="reset2">Reset</button>
 						<button disabled>Cancel</button>
 					</div>
@@ -591,8 +601,8 @@
 				<p><code>output</code>:</p>
 				<form
 					class="cluster"
-					onsubmit="return false"
-					oninput="o.value= a.valueAsNumber + b.valueAsNumber"
+					onsubmit="return false;"
+					oninput="o.value = a.valueAsNumber + b.valueAsNumber"
 				>
 					<input name="a" type="number" step="any" /> +
 					<input name="b" type="number" step="any" /> =
@@ -646,8 +656,8 @@
 				</ol>
 
 				<hr />
-				<div class="cluster" style="--cluster-vertical-alignment: stretch">
-					<pre><code>pre {
+
+				<pre><code>pre {
 	display: block;
 	padding: 7px;
 	background-color: #F5F5F5;
@@ -658,7 +668,7 @@
 	font-family: Menlo, Monaco;
 	line-height: 160%;
 }</code></pre>
-					<pre><samp>You are in an open field west of a big white house with a boarded
+				<pre><samp>You are in an open field west of a big white house with a boarded
 front door.
 There is a small mailbox here.
 
@@ -668,7 +678,6 @@ There is a small mailbox here.
 A leaflet.
 
 ></samp></pre>
-				</div>
 
 				<hr />
 				<h3 id="tables">Tables</h3>
