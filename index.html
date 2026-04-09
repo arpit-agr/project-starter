@@ -120,8 +120,8 @@
 					<p>
 						See the
 						<a href="https://www.w3.org/TR/html5/dom.html#sectioning-content"
-							>Sectioning Content spec.</a
-						>
+							>Sectioning Content spec</a
+						>.
 					</p>
 				</footer>
 			</section>
@@ -240,7 +240,7 @@
 					your user ID.
 				</p>
 				<p>
-					<code>meter</code> and <code>progress</code>: Storage space usage:
+					<code>meter</code> and <code>progress</code>: Usage:
 					<meter value="6" max="8">6 blocks used (out of 8 total)</meter>
 					Progress: <progress value="37" max="100">37%</progress>
 				</p>
@@ -262,8 +262,8 @@
 					<p>
 						See the
 						<a href="https://www.w3.org/TR/html5/dom.html#phrasing-content"
-							>Phrasing Content spec.</a
-						>
+							>Phrasing Content spec</a
+						>.
 					</p>
 				</footer>
 			</section>
@@ -350,32 +350,39 @@
 
 				<hr />
 				<h3 id="forms">Forms</h3>
-				<form class="flow">
-					<p>
+				<form
+					class="grid-auto"
+					style="
+						--grid-item-min: 16em;
+						--grid-gap: var(--space-l);
+						--stack-gap: var(--space-2xs-xs);
+					"
+				>
+					<div class="stack">
 						<label for="example-input-email">Email address</label>
 						<input type="email" id="example-input-email" />
-					</p>
-					<p>
+					</div>
+					<div class="stack">
 						<label for="example-input-number">Number</label>
 						<input type="number" id="example-input-number" />
-					</p>
-					<p>
+					</div>
+					<div class="stack">
 						<label for="example-input-password">Password</label>
 						<input type="password" id="example-input-password" />
-					</p>
-					<p>
+					</div>
+					<div class="stack">
 						<label for="example-input-search">Search</label>
 						<input type="search" id="example-input-search" />
-					</p>
-					<p>
+					</div>
+					<div class="stack">
 						<label for="example-input-tel">Telephone number</label>
 						<input type="tel" id="example-input-tel" />
-					</p>
-					<p>
+					</div>
+					<div class="stack">
 						<label for="example-input-text">Text</label>
 						<input type="text" id="example-input-text" />
-					</p>
-					<p>
+					</div>
+					<div class="stack">
 						<label for="example-input-readonly">Read-only</label>
 						<input
 							type="text"
@@ -383,8 +390,8 @@
 							readonly
 							value="Can't touch this!"
 						/>
-					</p>
-					<p>
+					</div>
+					<div class="stack">
 						<label for="example-input-disabled">Disabled</label>
 						<input
 							type="text"
@@ -392,44 +399,44 @@
 							disabled
 							value="Not available"
 						/>
-					</p>
-					<p>
+					</div>
+					<div class="stack">
 						<label for="example-input-url">URL</label>
 						<input type="url" id="example-input-url" />
-					</p>
-					<p>
-						<label for="example-input-color">Color</label>
-						<input type="color" id="example-input-color" />
-					</p>
-					<p>
+					</div>
+					<div class="stack">
 						<label for="example-input-date">Date</label>
 						<input type="date" id="example-input-date" />
-					</p>
-					<p>
+					</div>
+					<div class="stack">
 						<label for="example-input-date-time">Date / Time</label>
 						<input type="datetime-local" id="example-input-date-time" />
-					</p>
-					<p>
+					</div>
+					<div class="stack">
 						<label for="example-input-date-time-local">Date / Time local</label>
 						<input type="datetime-local" id="example-input-date-time-local" />
-					</p>
-					<p>
+					</div>
+					<div class="stack">
 						<label for="example-input-month">Month</label>
 						<input type="month" id="example-input-month" />
-					</p>
-					<p>
+					</div>
+					<div class="stack">
 						<label for="example-input-week">Week</label>
 						<input type="week" id="example-input-week" />
-					</p>
-					<p>
+					</div>
+					<div class="stack">
 						<label for="example-input-time">Time</label>
 						<input type="time" id="example-input-time" />
-					</p>
-					<p>
+					</div>
+					<div class="stack">
 						<label for="example-input-file">File input</label>
 						<input type="file" id="example-input-file" />
-					</p>
-					<p>
+					</div>
+					<div class="stack">
+						<label for="example-input-color">Color</label>
+						<input type="color" id="example-input-color" />
+					</div>
+					<div class="stack">
 						<label for="example-input-range">Range input</label>
 						<input
 							type="range"
@@ -438,8 +445,8 @@
 							max="4"
 							value="3"
 						/>
-					</p>
-					<p>
+					</div>
+					<div class="stack">
 						<label for="example-select1">Select</label>
 						<select id="example-select1">
 							<option>1</option>
@@ -448,8 +455,8 @@
 							<option>4</option>
 							<option>5</option>
 						</select>
-					</p>
-					<p>
+					</div>
+					<div class="stack">
 						<label for="example-select1a">Select with size</label>
 						<select id="example-select1a" size="2">
 							<option>1</option>
@@ -458,8 +465,8 @@
 							<option>4</option>
 							<option>5</option>
 						</select>
-					</p>
-					<p>
+					</div>
+					<div class="stack">
 						<label for="example-select2">Multiple select</label>
 						<select multiple id="example-select2">
 							<option>1</option>
@@ -468,11 +475,9 @@
 							<option>4</option>
 							<option>5</option>
 						</select>
-					</p>
-					<p>
-						<label for="example-optgroup"
-							>Select with optgroup: Favorite Car</label
-						>
+					</div>
+					<div class="stack">
+						<label for="example-optgroup">Select with optgroup</label>
 						<select id="example-optgroup">
 							<optgroup label="Swedish Cars">
 								<option>Volvo</option>
@@ -483,11 +488,9 @@
 								<option>Audi</option>
 							</optgroup>
 						</select>
-					</p>
-					<p>
-						<label for="example-optgroup2"
-							>Select with optgroup and size:Favorite Dish</label
-						>
+					</div>
+					<div class="stack">
+						<label for="example-optgroup2">Select with optgroup and size</label>
 						<select id="example-optgroup2" size="2">
 							<optgroup label="Vegetarian">
 								<option>Green Salad</option>
@@ -498,11 +501,9 @@
 								<option>Roast Beef</option>
 							</optgroup>
 						</select>
-					</p>
-					<p>
-						<label for="example-optgroup3"
-							>Multiple select with optgroup: Public transport</label
-						>
+					</div>
+					<div class="stack">
+						<label for="example-optgroup3">Multiple select with optgroup</label>
 						<select id="example-optgroup3" multiple>
 							<optgroup label="Ground">
 								<option>Train</option>
@@ -517,11 +518,15 @@
 								<option>Balloon</option>
 							</optgroup>
 						</select>
-					</p>
-					<p>
+					</div>
+					<div class="stack">
 						<label for="example-textarea">Textarea</label>
-						<textarea id="example-textarea" rows="3"></textarea>
-					</p>
+						<textarea
+							id="example-textarea"
+							rows="3"
+							style="flex-grow: 999; align-self: stretch"
+						></textarea>
+					</div>
 					<fieldset>
 						<legend>I am legend</legend>
 						<div>
@@ -571,7 +576,7 @@
 							<label for="checkbox2">and/or check me out</label>
 						</div>
 					</fieldset>
-					<p class="cluster">
+					<div class="cluster" style="grid-column: 1/-1">
 						<button type="button" name="button">Button</button>
 						<input type="button" name="input" value="Input Button" />
 						<input type="submit" name="submit" value="Input Submit" />
@@ -579,7 +584,7 @@
 						<input type="reset" name="reset" value="Input Reset" />
 						<button type="reset" name="reset2">Reset</button>
 						<button disabled>Cancel</button>
-					</p>
+					</div>
 				</form>
 
 				<hr />
@@ -641,7 +646,8 @@
 				</ol>
 
 				<hr />
-				<pre><code>pre {
+				<div class="cluster" style="--cluster-vertical-alignment: stretch">
+					<pre><code>pre {
 	display: block;
 	padding: 7px;
 	background-color: #F5F5F5;
@@ -652,7 +658,7 @@
 	font-family: Menlo, Monaco;
 	line-height: 160%;
 }</code></pre>
-				<pre><samp>You are in an open field west of a big white house with a boarded
+					<pre><samp>You are in an open field west of a big white house with a boarded
 front door.
 There is a small mailbox here.
 
@@ -662,6 +668,7 @@ There is a small mailbox here.
 A leaflet.
 
 ></samp></pre>
+				</div>
 
 				<hr />
 				<h3 id="tables">Tables</h3>
@@ -793,8 +800,8 @@ A leaflet.
 					<p>
 						See the
 						<a href="https://www.w3.org/TR/html5/dom.html#palpable-content"
-							>Palpable Content spec.</a
-						>
+							>Palpable Content spec</a
+						>.
 					</p>
 				</footer>
 			</section>
@@ -904,16 +911,13 @@ is a sample content.</p>"
 					</small>
 				</div>
 
-				<video
-					controls
-					src="https://0e3a5eef-235e-4b4b-9721-6b9e9e6c6d2b.mdnplay.dev/shared-assets/videos/flower.webm"
-				></video>
+				<video controls src="/img/flower.webm" width="960" height="540"></video>
 				<footer>
 					<p>
 						See the
 						<a href="https://www.w3.org/TR/html5/dom.html#embedded-content">
-							Embedded Content spec.
-						</a>
+							Embedded Content spec </a
+						>.
 					</p>
 				</footer>
 			</section>
