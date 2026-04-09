@@ -353,16 +353,19 @@
 				<hr />
 				<h3 id="forms">Forms</h3>
 				<form
-					class="grid-auto"
+					class="flow"
 					style="
-						--grid-item-min: 15em;
-						--grid-gap: var(--space-l);
 						--stack-gap: var(--space-2xs);
+						--stack-horizontal-alignment: stretch;
 					"
 				>
 					<div class="stack">
 						<label for="example-input-email">Email address</label>
-						<input type="email" id="example-input-email" />
+						<input
+							type="email"
+							id="example-input-email"
+							placeholder="hello@example.com"
+						/>
 					</div>
 					<div class="stack">
 						<label for="example-input-number">Number</label>
@@ -448,7 +451,7 @@
 							value="3"
 						/>
 					</div>
-					<!--<div class="stack">
+					<div class="stack">
 						<label for="example-select1">Select</label>
 						<select id="example-select1">
 							<option>1</option>
@@ -457,8 +460,8 @@
 							<option>4</option>
 							<option>5</option>
 						</select>
-					</div>-->
-					<!--<div class="stack">
+					</div>
+					<div class="stack">
 						<label for="example-select1a">Select with size</label>
 						<select id="example-select1a" size="2">
 							<option>1</option>
@@ -467,7 +470,7 @@
 							<option>4</option>
 							<option>5</option>
 						</select>
-					</div>-->
+					</div>
 					<div class="stack">
 						<label for="example-optgroup">Select with optgroup</label>
 						<select id="example-optgroup">
@@ -491,7 +494,7 @@
 							<option>5</option>
 						</select>
 					</div>
-					<!--<div class="stack">
+					<div class="stack">
 						<label for="example-optgroup2">Select with optgroup and size</label>
 						<select id="example-optgroup2" size="2">
 							<optgroup label="Vegetarian">
@@ -503,8 +506,8 @@
 								<option>Roast Beef</option>
 							</optgroup>
 						</select>
-					</div>-->
-					<!--<div class="stack">
+					</div>
+					<div class="stack">
 						<label for="example-optgroup3">Multiple select with optgroup</label>
 						<select id="example-optgroup3" multiple>
 							<optgroup label="Ground">
@@ -520,15 +523,12 @@
 								<option>Balloon</option>
 							</optgroup>
 						</select>
-					</div>-->
-					<div class="stack" style="grid-column: 1/-1">
-						<label for="example-textarea">Textarea</label>
-						<textarea
-							id="example-textarea"
-							style="flex-grow: 999; align-self: stretch"
-						></textarea>
 					</div>
-					<fieldset class="stack" style="grid-column: 1/-1">
+					<div class="stack">
+						<label for="example-textarea">Textarea</label>
+						<textarea id="example-textarea"></textarea>
+					</div>
+					<fieldset class="stack">
 						<legend>I am legend</legend>
 						<div>
 							<input
@@ -566,7 +566,7 @@
 							<label for="option-radio3">Option three is disabled</label>
 						</div>
 					</fieldset>
-					<fieldset class="stack" style="grid-column: 1/-1">
+					<fieldset class="stack">
 						<legend>I am also legend</legend>
 						<div>
 							<input type="checkbox" id="checkbox1" />
@@ -577,7 +577,7 @@
 							<label for="checkbox2">and/or check me out</label>
 						</div>
 					</fieldset>
-					<div class="cluster" style="grid-column: 1/-1">
+					<div class="cluster">
 						<button type="button" name="button">Button</button>
 						<!--<input type="button" name="input" value="Input Button" />
 						<input type="submit" name="submit" value="Input Submit" />-->
