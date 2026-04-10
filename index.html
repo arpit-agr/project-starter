@@ -313,7 +313,7 @@
 								the key.
 							</p>
 						</blockquote>
-						<figcaption>
+						<figcaption style="--flow-space: 0.5lh">
 							<p>
 								Carl Sagan, in "<cite>Wonder and Skepticism</cite>", from the
 								<cite>Skeptical Inquirer</cite> Volume 19, Issue 1
@@ -323,10 +323,25 @@
 					</figure>
 				</div>
 				<details>
-					<summary>Details</summary>
-					Something small enough to escape casual notice.
+					<summary>
+						<span>Help with nationality</span>
+					</summary>
+					<div>
+						We need to know your nationality so we can work out which elections
+						you’re entitled to vote in. If you cannot provide your nationality,
+						you’ll have to send copies of identity documents through the post.
+					</div>
 				</details>
+				<div>
+					<button command="show-modal" commandfor="my-dialog">
+						Open dialog
+					</button>
 
+					<dialog id="my-dialog" class="flow">
+						<p>This dialog was opened using an invoker command.</p>
+						<button commandfor="my-dialog" command="close">Close</button>
+					</dialog>
+				</div>
 				<dl class="flow">
 					<div>
 						<dt>Definition List Title</dt>
@@ -355,6 +370,7 @@
 				<form
 					class="flow"
 					style="
+						--flow-space: var(--space-m);
 						--stack-gap: var(--space-2xs);
 						--stack-horizontal-alignment: stretch;
 					"
@@ -364,7 +380,7 @@
 						<input
 							type="email"
 							id="example-input-email"
-							placeholder="hello@example.com"
+							placeholder="name@example.com"
 						/>
 					</div>
 					<div class="stack">
@@ -447,8 +463,8 @@
 							type="range"
 							id="example-input-range"
 							min="1"
-							max="4"
-							value="3"
+							max="100"
+							value="33"
 						/>
 					</div>
 					<div class="stack">
@@ -528,56 +544,99 @@
 						<label for="example-textarea">Textarea</label>
 						<textarea id="example-textarea"></textarea>
 					</div>
-					<fieldset class="stack">
-						<legend>I am legend</legend>
-						<div>
-							<input
-								type="radio"
-								name="option-radio"
-								id="option-radio1"
-								value="option1"
-								checked
-							/>
-							<label for="option-radio1"
-								>Option one is this and that&mdash;be sure to include why it's
-								great</label
-							>
+					<fieldset class="flow" aria-describedby="hint-radio">
+						<legend>Where do you live?</legend>
+						<div
+							id="hint-radio"
+							style="--flow-space: 0.25lh; font-size: var(--step--1)"
+						>
+							Select one option
 						</div>
-						<div>
-							<input
-								type="radio"
-								name="option-radio"
-								id="option-radio2"
-								value="option2"
-							/>
-							<label for="option-radio2"
-								>Option two can be something else and selecting it will deselect
-								option one</label
-							>
-						</div>
-						<div>
-							<input
-								type="radio"
-								name="option-radio"
-								id="option-radio3"
-								value="option3"
-								disabled
-							/>
-							<label for="option-radio3">Option three is disabled</label>
+						<div style="--flow-space: 0.5lh">
+							<div>
+								<input
+									id="whereDoYouLive"
+									name="whereDoYouLive"
+									type="radio"
+									value="england"
+								/>
+								<label for="whereDoYouLive"> England </label>
+							</div>
+							<div>
+								<input
+									id="whereDoYouLive-2"
+									name="whereDoYouLive"
+									type="radio"
+									value="scotland"
+								/>
+								<label for="whereDoYouLive-2"> Scotland </label>
+							</div>
+							<div>
+								<input
+									id="whereDoYouLive-3"
+									name="whereDoYouLive"
+									type="radio"
+									value="wales"
+								/>
+								<label for="whereDoYouLive-3"> Wales </label>
+							</div>
+							<div>
+								<input
+									id="whereDoYouLive-4"
+									name="whereDoYouLive"
+									type="radio"
+									value="northern-ireland"
+								/>
+								<label for="whereDoYouLive-4"> Northern Ireland </label>
+							</div>
+							<div>or</div>
+							<div>
+								<input
+									id="whereDoYouLive-5"
+									name="whereDoYouLive"
+									type="radio"
+									value="nota"
+								/>
+								<label for="whereDoYouLive-5"> None of the above </label>
+							</div>
 						</div>
 					</fieldset>
-					<fieldset class="stack">
-						<legend>I am also legend</legend>
-						<div>
-							<input type="checkbox" id="checkbox1" />
-							<label for="checkbox1">Check me out</label>
+					<fieldset class="flow" aria-describedby="hint-checkbox">
+						<legend style="--flow-space: 0.5lh">
+							Which types of waste do you transport?
+						</legend>
+						<div
+							id="hint-checkbox"
+							style="--flow-space: 0.25lh; font-size: var(--step--1)"
+						>
+							Select all that apply
 						</div>
-						<div>
-							<input type="checkbox" id="checkbox2" />
-							<label for="checkbox2">and/or check me out</label>
+						<div style="--flow-space: 0.5lh">
+							<div>
+								<input
+									id="waste"
+									name="waste"
+									type="checkbox"
+									value="carcasses"
+								/>
+								<label for="waste"> Waste from animal carcasses </label>
+							</div>
+							<div>
+								<input
+									id="waste-2"
+									name="waste"
+									type="checkbox"
+									value="mines"
+								/>
+								<label for="waste-2"> Waste from mines or quarries </label>
+							</div>
+							<div>
+								<input id="waste-3" name="waste" type="checkbox" value="farm" />
+								<label for="waste-3"> Farm or agricultural waste </label>
+							</div>
 						</div>
 					</fieldset>
-					<div class="cluster">
+					<div class="cluster" style="--cluster-gap: var(--space-xs)">
 						<button type="button" name="button">Button</button>
 						<!--<input type="button" name="input" value="Input Button" />
 						<input type="submit" name="submit" value="Input Submit" />-->
@@ -588,7 +647,7 @@
 					</div>
 				</form>
 
-				<hr />
+				<!--<hr />
 				<p><code>output</code>:</p>
 				<form
 					class="cluster"
@@ -598,7 +657,7 @@
 					<input name="a" type="number" step="any" /> +
 					<input name="b" type="number" step="any" /> =
 					<output name="o" for="a b"></output>
-				</form>
+				</form>-->
 
 				<hr />
 				<ul>
@@ -672,50 +731,33 @@ A leaflet.
 
 				<hr />
 				<h3 id="tables">Tables</h3>
-				<div role="region" aria-labelledby="Caption01" tabindex="0">
-					<table>
-						<caption id="Caption01">
-							Tables can have captions now.
-						</caption>
-						<tbody>
-							<tr>
-								<th>Person</th>
-								<th>Number</th>
-								<th>Third Column</th>
-							</tr>
-							<tr>
-								<td>Someone Lastname</td>
-								<td>900</td>
-								<td>Nullam quis risus eget urna mollis ornare vel eu leo.</td>
-							</tr>
-							<tr>
-								<td><a href="#">Person Name</a></td>
-								<td>1200</td>
-								<td>
-									Vestibulum id ligula porta felis euismod semper. Donec
-									ullamcorper nulla non metus auctor fringilla.
-								</td>
-							</tr>
-							<tr>
-								<td>Another Person</td>
-								<td>1500</td>
-								<td>
-									Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor
-									auctor. Nullam id dolor id nibh ultricies vehicula ut id elit.
-								</td>
-							</tr>
-							<tr>
-								<td>Last One</td>
-								<td>2800</td>
-								<td>
-									Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
-									Cras mattis consectetur purus sit amet fermentum.
-								</td>
-							</tr>
-						</tbody>
-					</table>
-				</div>
-				<p id="table-summary">
+				<table>
+					<caption>
+						Dates and amounts
+					</caption>
+					<thead>
+						<tr>
+							<th scope="col">Date</th>
+							<th scope="col">Amount</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th scope="row">First 6 weeks</th>
+							<td>£109.80 per week</td>
+						</tr>
+						<tr>
+							<th scope="row">Next 33 weeks</th>
+							<td>£109.80 per week</td>
+						</tr>
+						<tr>
+							<th scope="row">Total estimated pay</th>
+							<td>£4,282.20</td>
+						</tr>
+					</tbody>
+				</table>
+
+				<!--<p id="table-summary">
 					In the following table, characteristics are given in the second
 					column, with the negative side in the left column and the positive
 					side in the right column.
@@ -794,7 +836,7 @@ A leaflet.
 							</tr>
 						</tfoot>
 					</table>
-				</div>
+				</div>-->
 
 				<footer>
 					<p>
