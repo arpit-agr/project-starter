@@ -549,7 +549,7 @@
 
 		/* semantic */
 		--color-error: var(--red);
-		--focus-ring-width: 2px;
+		--focus-ring-width: 3px;
 		--focus-ring-style: solid;
 		--focus-ring-color: light-dark(var(--yellow), var(--yellow-shade-50));
 		--focus-ring-offset: 0px;
@@ -778,7 +778,7 @@
 
 		&:focus-visible {
 			outline-color: #0000;
-			box-shadow: 0 var(--border-width-heavy, 2px)
+			box-shadow: 0 var(--focus-ring-width, 3px)
 				var(--color-text-focus, canvasText);
 			background: var(--focus-ring-color);
 			color: var(--color-text-focus, canvasText);
@@ -1079,7 +1079,7 @@
 			outline-color: #0000;
 			box-shadow: var(
 				--btn-shadow-focus,
-				0 var(--border-width-heavy, 2px) 0 var(--color-text-focus, canvasText)
+				0 var(--focus-ring-width, 3px) 0 var(--color-text-focus, canvasText)
 			);
 			background: var(--focus-ring-color);
 			color: var(--color-text-focus, canvasText);
