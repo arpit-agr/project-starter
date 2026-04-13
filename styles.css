@@ -170,7 +170,7 @@
 			--focus-ring-color: light-dark(
 				var(--yellow),
 				oklch(from var(--yellow) l c h / 0.8)
-			); /* FIX ME*/
+			);
 			--focus-ring-offset: 0px;
 
 			/*--color-selection-bg: light-dark();
