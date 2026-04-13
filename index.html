@@ -366,288 +366,302 @@
 				</dl>
 
 				<hr />
-				<h3 id="forms">Forms</h3>
-				<form
-					class="flow"
-					style="
-						--flow-space: var(--space-m);
-						--stack-gap: var(--space-2xs);
-						--stack-horizontal-alignment: stretch;
-					"
-				>
-					<div class="stack">
-						<label for="example-input-email">Email address</label>
-						<input
-							type="email"
-							id="example-input-email"
-							placeholder="name@example.com"
-						/>
-					</div>
-					<div class="stack">
-						<label for="example-input-number">Number</label>
-						<input type="number" id="example-input-number" />
-					</div>
-					<div class="stack">
-						<label for="example-input-password">Password</label>
-						<input type="password" id="example-input-password" />
-					</div>
-					<div class="stack">
-						<label for="example-input-search">Search</label>
-						<input type="search" id="example-input-search" />
-					</div>
-					<div class="stack">
-						<label for="example-input-tel">Telephone number</label>
-						<input type="tel" id="example-input-tel" />
-					</div>
-					<div class="stack">
-						<label for="example-input-text">Text</label>
-						<input type="text" id="example-input-text" />
-					</div>
-					<div class="stack">
-						<label for="example-input-url">URL</label>
-						<input type="url" id="example-input-url" />
-					</div>
-					<div class="stack">
-						<label for="example-input-file">File input</label>
-						<input type="file" id="example-input-file" />
-					</div>
-					<div class="stack">
-						<label for="example-input-readonly">Read-only</label>
-						<input
-							type="text"
-							id="example-input-readonly"
-							readonly
-							value="Can't touch this!"
-						/>
-					</div>
-					<div class="stack">
-						<label for="example-input-disabled">Disabled</label>
-						<input
-							type="text"
-							id="example-input-disabled"
-							disabled
-							value="Not available"
-						/>
-					</div>
-					<div class="stack">
-						<label for="example-input-time">Time</label>
-						<input type="time" id="example-input-time" />
-					</div>
-					<div class="stack">
-						<label for="example-input-date">Date</label>
-						<input type="date" id="example-input-date" />
-					</div>
-					<div class="stack">
-						<label for="example-input-date-time">Date / Time</label>
-						<input type="datetime-local" id="example-input-date-time" />
-					</div>
-					<div class="stack">
-						<label for="example-input-date-time-local">Date / Time local</label>
-						<input type="datetime-local" id="example-input-date-time-local" />
-					</div>
-					<div class="stack">
-						<label for="example-input-month">Month</label>
-						<input type="month" id="example-input-month" />
-					</div>
-					<div class="stack">
-						<label for="example-input-week">Week</label>
-						<input type="week" id="example-input-week" />
-					</div>
-					<div class="stack">
-						<label for="example-input-color">Color</label>
-						<input type="color" id="example-input-color" />
-					</div>
-					<div class="stack">
-						<label for="example-input-range">Range input</label>
-						<input
-							type="range"
-							id="example-input-range"
-							min="1"
-							max="100"
-							value="33"
-						/>
-					</div>
-					<div class="stack">
-						<label for="example-select1">Select</label>
-						<select id="example-select1">
-							<option>1</option>
-							<option>2</option>
-							<option>3</option>
-							<option>4</option>
-							<option>5</option>
-						</select>
-					</div>
-					<div class="stack">
-						<label for="example-select1a">Select with size</label>
-						<select id="example-select1a" size="2">
-							<option>1</option>
-							<option>2</option>
-							<option>3</option>
-							<option>4</option>
-							<option>5</option>
-						</select>
-					</div>
-					<div class="stack">
-						<label for="example-optgroup">Select with optgroup</label>
-						<select id="example-optgroup">
-							<optgroup label="Swedish Cars">
-								<option>Volvo</option>
-								<option>Saab</option>
-							</optgroup>
-							<optgroup label="German Cars">
-								<option>Mercedes</option>
-								<option>Audi</option>
-							</optgroup>
-						</select>
-					</div>
-					<div class="stack">
-						<label for="example-select2">Multiple select</label>
-						<select multiple id="example-select2">
-							<option>1</option>
-							<option>2</option>
-							<option>3</option>
-							<option>4</option>
-							<option>5</option>
-						</select>
-					</div>
-					<div class="stack">
-						<label for="example-optgroup2">Select with optgroup and size</label>
-						<select id="example-optgroup2" size="2">
-							<optgroup label="Vegetarian">
-								<option>Green Salad</option>
-								<option>French Fries</option>
-							</optgroup>
-							<optgroup label="Carnivorous">
-								<option>Big Mac</option>
-								<option>Roast Beef</option>
-							</optgroup>
-						</select>
-					</div>
-					<div class="stack">
-						<label for="example-optgroup3">Multiple select with optgroup</label>
-						<select id="example-optgroup3" multiple>
-							<optgroup label="Ground">
-								<option>Train</option>
-								<option>Bus</option>
-							</optgroup>
-							<optgroup label="Water">
-								<option>Ship</option>
-								<option>Submarine</option>
-							</optgroup>
-							<optgroup label="Air">
-								<option>Plane</option>
-								<option>Balloon</option>
-							</optgroup>
-						</select>
-					</div>
-					<div class="stack">
-						<label for="example-textarea">Textarea</label>
-						<textarea id="example-textarea"></textarea>
-					</div>
-					<fieldset class="flow" aria-describedby="hint-radio">
-						<legend>Where do you live?</legend>
-						<div
-							id="hint-radio"
-							style="--flow-space: 0.5lh; font-size: var(--step--1)"
-						>
-							Select one option
-						</div>
-						<div style="--flow-space: 0.25lh">
-							<div>
-								<input
-									id="whereDoYouLive"
-									name="whereDoYouLive"
-									type="radio"
-									value="england"
-								/>
-								<label for="whereDoYouLive"> England </label>
-							</div>
-							<div>
-								<input
-									id="whereDoYouLive-2"
-									name="whereDoYouLive"
-									type="radio"
-									value="scotland"
-								/>
-								<label for="whereDoYouLive-2"> Scotland </label>
-							</div>
-							<div>
-								<input
-									id="whereDoYouLive-3"
-									name="whereDoYouLive"
-									type="radio"
-									value="wales"
-								/>
-								<label for="whereDoYouLive-3"> Wales </label>
-							</div>
-							<div>
-								<input
-									id="whereDoYouLive-4"
-									name="whereDoYouLive"
-									type="radio"
-									value="northern-ireland"
-								/>
-								<label for="whereDoYouLive-4"> Northern Ireland </label>
-							</div>
-							<div>or</div>
-							<div>
-								<input
-									id="whereDoYouLive-5"
-									name="whereDoYouLive"
-									type="radio"
-									value="nota"
-								/>
-								<label for="whereDoYouLive-5"> None of the above </label>
-							</div>
-						</div>
-					</fieldset>
-					<fieldset class="flow" aria-describedby="hint-checkbox">
-						<legend style="--flow-space: 0.5lh">
-							Which types of waste do you transport?
-						</legend>
-						<div
-							id="hint-checkbox"
-							style="--flow-space: 0.5lh; font-size: var(--step--1)"
-						>
-							Select all that apply
-						</div>
-						<div style="--flow-space: 0.25lh">
-							<div>
-								<input
-									id="waste"
-									name="waste"
-									type="checkbox"
-									value="carcasses"
-								/>
-								<label for="waste"> Waste from animal carcasses </label>
-							</div>
-							<div>
-								<input
-									id="waste-2"
-									name="waste"
-									type="checkbox"
-									value="mines"
-								/>
-								<label for="waste-2"> Waste from mines or quarries </label>
-							</div>
-							<div>
-								<input id="waste-3" name="waste" type="checkbox" value="farm" />
-								<label for="waste-3"> Farm or agricultural waste </label>
-							</div>
-						</div>
-					</fieldset>
-					<div class="cluster" style="--cluster-gap: var(--space-xs)">
-						<button type="button" name="button">Button</button>
-						<!--<input type="button" name="input" value="Input Button" />
-						<input type="submit" name="submit" value="Input Submit" />-->
-						<button type="submit" name="submit2">Submit</button>
-						<!--<input type="reset" name="reset" value="Input Reset" />-->
-						<button type="reset" name="reset2">Reset</button>
-						<button disabled>Cancel</button>
-					</div>
-				</form>
+				<div class="flow">
+					<h3 id="forms">Forms</h3>
 
-				<!--<hr />
+					<form
+						class="flow"
+						style="
+							--flow-space: var(--space-m);
+							--stack-gap: var(--space-2xs);
+							--stack-horizontal-alignment: stretch;
+							max-inline-size: 45ch;
+						"
+					>
+						<div class="stack">
+							<label for="example-input-email">Email address</label>
+							<input
+								type="email"
+								id="example-input-email"
+								placeholder="name@example.com"
+							/>
+						</div>
+						<div class="stack">
+							<label for="example-input-number">Number</label>
+							<input type="number" id="example-input-number" />
+						</div>
+						<div class="stack">
+							<label for="example-input-password">Password</label>
+							<input type="password" id="example-input-password" />
+						</div>
+						<div class="stack">
+							<label for="example-input-search">Search</label>
+							<input type="search" id="example-input-search" />
+						</div>
+						<div class="stack">
+							<label for="example-input-tel">Telephone number</label>
+							<input type="tel" id="example-input-tel" />
+						</div>
+						<div class="stack">
+							<label for="example-input-text">Text</label>
+							<input type="text" id="example-input-text" />
+						</div>
+						<div class="stack">
+							<label for="example-input-url">URL</label>
+							<input type="url" id="example-input-url" />
+						</div>
+						<div class="stack">
+							<label for="example-input-file">File input</label>
+							<input type="file" id="example-input-file" />
+						</div>
+						<div class="stack">
+							<label for="example-input-readonly">Read-only</label>
+							<input
+								type="text"
+								id="example-input-readonly"
+								readonly
+								value="Can't touch this!"
+							/>
+						</div>
+						<div class="stack">
+							<label for="example-input-disabled">Disabled</label>
+							<input
+								type="text"
+								id="example-input-disabled"
+								disabled
+								value="Not available"
+							/>
+						</div>
+						<div class="stack">
+							<label for="example-input-time">Time</label>
+							<input type="time" id="example-input-time" />
+						</div>
+						<div class="stack">
+							<label for="example-input-date">Date</label>
+							<input type="date" id="example-input-date" />
+						</div>
+						<div class="stack">
+							<label for="example-input-date-time">Date / Time</label>
+							<input type="datetime-local" id="example-input-date-time" />
+						</div>
+						<div class="stack">
+							<label for="example-input-date-time-local"
+								>Date / Time local</label
+							>
+							<input type="datetime-local" id="example-input-date-time-local" />
+						</div>
+						<div class="stack">
+							<label for="example-input-month">Month</label>
+							<input type="month" id="example-input-month" />
+						</div>
+						<div class="stack">
+							<label for="example-input-week">Week</label>
+							<input type="week" id="example-input-week" />
+						</div>
+						<div class="stack">
+							<label for="example-input-color">Color</label>
+							<input type="color" id="example-input-color" />
+						</div>
+						<div class="stack">
+							<label for="example-input-range">Range input</label>
+							<input
+								type="range"
+								id="example-input-range"
+								min="1"
+								max="100"
+								value="33"
+							/>
+						</div>
+						<div class="stack">
+							<label for="example-select1">Select</label>
+							<select id="example-select1">
+								<option>1</option>
+								<option>2</option>
+								<option>3</option>
+								<option>4</option>
+								<option>5</option>
+							</select>
+						</div>
+						<div class="stack">
+							<label for="example-select1a">Select with size</label>
+							<select id="example-select1a" size="2">
+								<option>1</option>
+								<option>2</option>
+								<option>3</option>
+								<option>4</option>
+								<option>5</option>
+							</select>
+						</div>
+						<div class="stack">
+							<label for="example-optgroup">Select with optgroup</label>
+							<select id="example-optgroup">
+								<optgroup label="Swedish Cars">
+									<option>Volvo</option>
+									<option>Saab</option>
+								</optgroup>
+								<optgroup label="German Cars">
+									<option>Mercedes</option>
+									<option>Audi</option>
+								</optgroup>
+							</select>
+						</div>
+						<div class="stack">
+							<label for="example-select2">Multiple select</label>
+							<select multiple id="example-select2">
+								<option>1</option>
+								<option>2</option>
+								<option>3</option>
+								<option>4</option>
+								<option>5</option>
+							</select>
+						</div>
+						<div class="stack">
+							<label for="example-optgroup2"
+								>Select with optgroup and size</label
+							>
+							<select id="example-optgroup2" size="2">
+								<optgroup label="Vegetarian">
+									<option>Green Salad</option>
+									<option>French Fries</option>
+								</optgroup>
+								<optgroup label="Carnivorous">
+									<option>Big Mac</option>
+									<option>Roast Beef</option>
+								</optgroup>
+							</select>
+						</div>
+						<div class="stack">
+							<label for="example-optgroup3"
+								>Multiple select with optgroup</label
+							>
+							<select id="example-optgroup3" multiple>
+								<optgroup label="Ground">
+									<option>Train</option>
+									<option>Bus</option>
+								</optgroup>
+								<optgroup label="Water">
+									<option>Ship</option>
+									<option>Submarine</option>
+								</optgroup>
+								<optgroup label="Air">
+									<option>Plane</option>
+									<option>Balloon</option>
+								</optgroup>
+							</select>
+						</div>
+						<div class="stack">
+							<label for="example-textarea">Textarea</label>
+							<textarea id="example-textarea"></textarea>
+						</div>
+						<fieldset class="flow" aria-describedby="hint-radio">
+							<legend>Where do you live?</legend>
+							<div
+								id="hint-radio"
+								style="--flow-space: 0.5lh; font-size: var(--step--1)"
+							>
+								Select one option
+							</div>
+							<div style="--flow-space: 0.25lh">
+								<div>
+									<input
+										id="whereDoYouLive"
+										name="whereDoYouLive"
+										type="radio"
+										value="england"
+									/>
+									<label for="whereDoYouLive"> England </label>
+								</div>
+								<div>
+									<input
+										id="whereDoYouLive-2"
+										name="whereDoYouLive"
+										type="radio"
+										value="scotland"
+									/>
+									<label for="whereDoYouLive-2"> Scotland </label>
+								</div>
+								<div>
+									<input
+										id="whereDoYouLive-3"
+										name="whereDoYouLive"
+										type="radio"
+										value="wales"
+									/>
+									<label for="whereDoYouLive-3"> Wales </label>
+								</div>
+								<div>
+									<input
+										id="whereDoYouLive-4"
+										name="whereDoYouLive"
+										type="radio"
+										value="northern-ireland"
+									/>
+									<label for="whereDoYouLive-4"> Northern Ireland </label>
+								</div>
+								<div>or</div>
+								<div>
+									<input
+										id="whereDoYouLive-5"
+										name="whereDoYouLive"
+										type="radio"
+										value="nota"
+									/>
+									<label for="whereDoYouLive-5"> None of the above </label>
+								</div>
+							</div>
+						</fieldset>
+						<fieldset class="flow" aria-describedby="hint-checkbox">
+							<legend style="--flow-space: 0.5lh">
+								Which types of waste do you transport?
+							</legend>
+							<div
+								id="hint-checkbox"
+								style="--flow-space: 0.5lh; font-size: var(--step--1)"
+							>
+								Select all that apply
+							</div>
+							<div style="--flow-space: 0.25lh">
+								<div>
+									<input
+										id="waste"
+										name="waste"
+										type="checkbox"
+										value="carcasses"
+									/>
+									<label for="waste"> Waste from animal carcasses </label>
+								</div>
+								<div>
+									<input
+										id="waste-2"
+										name="waste"
+										type="checkbox"
+										value="mines"
+									/>
+									<label for="waste-2"> Waste from mines or quarries </label>
+								</div>
+								<div>
+									<input
+										id="waste-3"
+										name="waste"
+										type="checkbox"
+										value="farm"
+									/>
+									<label for="waste-3"> Farm or agricultural waste </label>
+								</div>
+							</div>
+						</fieldset>
+						<div class="cluster" style="--cluster-gap: var(--space-xs)">
+							<button type="button" name="button">Button</button>
+							<!--<input type="button" name="input" value="Input Button" />
+						<input type="submit" name="submit" value="Input Submit" />-->
+							<button type="submit" name="submit2">Submit</button>
+							<!--<input type="reset" name="reset" value="Input Reset" />-->
+							<button type="reset" name="reset2">Reset</button>
+							<button disabled>Cancel</button>
+						</div>
+					</form>
+
+					<!--<hr />
 				<p><code>output</code>:</p>
 				<form
 					class="cluster"
@@ -658,52 +672,55 @@
 					<input name="b" type="number" step="any" /> =
 					<output name="o" for="a b"></output>
 				</form>-->
+				</div>
 
 				<hr />
-				<ul>
-					<li>
-						Unordered List item one
-						<ul>
-							<li>
-								Nested list item
-								<ul>
-									<li>Level 3, item one</li>
-									<li>Level 3, item two</li>
-									<li>Level 3, item three</li>
-									<li>Level 3, item four</li>
-								</ul>
-							</li>
-							<li>List item two</li>
-							<li>List item three</li>
-							<li>List item four</li>
-						</ul>
-					</li>
-					<li>List item two</li>
-					<li>List item three</li>
-					<li>List item four</li>
-				</ul>
-				<ol>
-					<li>
-						List item one
-						<ol>
-							<li>
-								List item one
-								<ol>
-									<li>List item one</li>
-									<li>List item two</li>
-									<li>List item three</li>
-									<li>List item four</li>
-								</ol>
-							</li>
-							<li>List item two</li>
-							<li>List item three</li>
-							<li>List item four</li>
-						</ol>
-					</li>
-					<li>List item two</li>
-					<li>List item three</li>
-					<li>List item four</li>
-				</ol>
+				<div class="flow">
+					<ul>
+						<li>
+							Unordered List item one
+							<ul>
+								<li>
+									Nested list item
+									<ul>
+										<li>Level 3, item one</li>
+										<li>Level 3, item two</li>
+										<li>Level 3, item three</li>
+										<li>Level 3, item four</li>
+									</ul>
+								</li>
+								<li>List item two</li>
+								<li>List item three</li>
+								<li>List item four</li>
+							</ul>
+						</li>
+						<li>List item two</li>
+						<li>List item three</li>
+						<li>List item four</li>
+					</ul>
+					<ol>
+						<li>
+							List item one
+							<ol>
+								<li>
+									List item one
+									<ol>
+										<li>List item one</li>
+										<li>List item two</li>
+										<li>List item three</li>
+										<li>List item four</li>
+									</ol>
+								</li>
+								<li>List item two</li>
+								<li>List item three</li>
+								<li>List item four</li>
+							</ol>
+						</li>
+						<li>List item two</li>
+						<li>List item three</li>
+						<li>List item four</li>
+					</ol>
+				</div>
 
 				<hr />
 
@@ -730,32 +747,34 @@ A leaflet.
 ></samp></pre>
 
 				<hr />
-				<h3 id="tables">Tables</h3>
-				<table>
-					<caption>
-						Dates and amounts
-					</caption>
-					<thead>
-						<tr>
-							<th scope="col">Date</th>
-							<th scope="col">Amount</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<th scope="row">First 6 weeks</th>
-							<td>£109.80 per week</td>
-						</tr>
-						<tr>
-							<th scope="row">Next 33 weeks</th>
-							<td>£109.80 per week</td>
-						</tr>
-						<tr>
-							<th scope="row">Total estimated pay</th>
-							<td>£4,282.20</td>
-						</tr>
-					</tbody>
-				</table>
+				<div class="flow">
+					<h3 id="tables">Tables</h3>
+					<table>
+						<caption>
+							Dates and amounts
+						</caption>
+						<thead>
+							<tr>
+								<th scope="col">Date</th>
+								<th scope="col">Amount</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<th scope="row">First 6 weeks</th>
+								<td>£109.80 per week</td>
+							</tr>
+							<tr>
+								<th scope="row">Next 33 weeks</th>
+								<td>£109.80 per week</td>
+							</tr>
+							<tr>
+								<th scope="row">Total estimated pay</th>
+								<td>£4,282.20</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
 
 				<!--<p id="table-summary">
 					In the following table, characteristics are given in the second
