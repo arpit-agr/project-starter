@@ -87,9 +87,6 @@
 
 			/* color */
 			/* bring your own color tokens */
-			--red: #ca3535;
-			--green: #0f7a52;
-			--yellow: #ffdd00;
 
 			/* font */
 			--font-sans: ui-sans-serif, system-ui;
@@ -128,7 +125,7 @@
 
 			@media (prefers-color-scheme: dark) {
 				--border-width-thick: 1.5px;
-				--border-width-heavy: 4px;
+				--border-width-heavy: 3px;
 			}
 
 			/* motion */
@@ -144,7 +141,7 @@
 		}
 	}
 
-	@layer semantics {
+	@layer semantic {
 		:root {
 			--wrapper-max-width: 60ch;
 			--wrapper-padding-inline: var(--space-s-l);
@@ -161,18 +158,14 @@
 			--color-text: light-dark();
 			--color-text-focus: light-dark();
 			--color-accent: light-dark();*/
-			--color-error: var(--red);
 
 			--font-body: var(--font-sans);
 			--font-heading: var(--font-sans);
 
 			--focus-ring-width: var(--border-width-heavy);
-			--focus-ring-style: solid;
-			--focus-ring-color: light-dark(
-				var(--yellow),
-				oklch(from var(--yellow) l c h / 0.8)
-			);
-			--focus-ring-offset: 0px;
+			/*--focus-ring-style: ;
+			--focus-ring-color: ;
+			--focus-ring-offset: ;*/
 
 			/*--color-selection-bg: light-dark();
 			--color-selection-text: light-dark();*/
@@ -216,7 +209,8 @@
 			--btn-border-style: var(--border-style);
 			/*--btn-border-color: light-dark();*/
 			--btn-radius: var(--radius-none);
-			/*--btn-shadow: ;*/
+			/*--btn-shadow: ;
+			--btn-shadow-focus: ;*/
 		}
 
 		hr {
@@ -547,6 +541,20 @@
 		navigation: auto;
 	}
 
+	:root {
+		/* base */
+		--yellow: #ffdd00;
+		--yellow-shade-50: #806f00;
+		--red: #ca3535;
+
+		/* semantic */
+		--color-error: var(--red);
+		--focus-ring-width: 2px;
+		--focus-ring-style: solid;
+		--focus-ring-color: light-dark(var(--yellow), var(--yellow-shade-50));
+		--focus-ring-offset: 0px;
+	}
+
 	html {
 		block-size: 100%;
 		color-scheme: light dark;
@@ -770,9 +778,9 @@
 
 		&:focus-visible {
 			outline-color: #0000;
-			box-shadow: 0 var(--border-width-heavy)
+			box-shadow: 0 var(--border-width-heavy, 2px)
 				var(--color-text-focus, canvasText);
-			background: var(--focus-ring-color, -webkit-focus-ring-color);
+			background: var(--focus-ring-color);
 			color: var(--color-text-focus, canvasText);
 			text-decoration: none;
 		}
@@ -796,8 +804,8 @@
 	textarea,
 	select {
 		&:focus-visible {
-			box-shadow: inset 0 0 0 var(--fc-border-width)
-				var(--fc-border-color, currentColor);
+			box-shadow: inset 0 0 0 var(--fc-border-width, 1px)
+				var(--color-text-focus, canvasText);
 		}
 	}
 
@@ -828,7 +836,7 @@
 		flex-wrap: nowrap;
 
 		&:has(input:hover, label:hover) label::before {
-			box-shadow: 0 0 0 0.333rem
+			box-shadow: 0 0 0 var(--focus-ring-width)
 				var(--fc-shadow-color, oklch(from currentColor l c h / 0.25));
 		}
 
@@ -900,8 +908,7 @@
 
 		:where([type="radio"], [type="checkbox"]):focus-visible + label::before {
 			border-width: calc(var(--fc-border-width, 1px) + 1px);
-			box-shadow: 0 0 0 0.25rem
-				var(--focus-ring-color, -webkit-focus-ring-color);
+			box-shadow: 0 0 0 var(--focus-ring-width) var(--focus-ring-color);
 		}
 	}
 
@@ -1050,7 +1057,10 @@
 		border-radius: var(--btn-radius, 0.25rem);
 		background: var(--btn-color-bg, ButtonFace);
 		color: var(--btn-color-text, ButtonText);
-		/*box-shadow: var(--btn-shadow);*/
+		box-shadow: var(
+			--btn-shadow,
+			0 var(--border-width-thick, 1px) 0 var(--color-text, canvasText)
+		);
 
 		transition-property: background, scale;
 		transition-duration: var(--transition-fast, 75ms);
@@ -1066,7 +1076,12 @@
 
 		&:focus-visible {
 			outline-color: #0000;
-			background: var(--focus-ring-color, -webkit-focus-ring-color);
+			box-shadow: var(
+				--btn-shadow-focus,
+				0 var(--border-width-heavy, 2px) 0 var(--color-text-focus, canvasText)
+			);
+			background: var(--focus-ring-color);
+			color: var(--color-text-focus, canvasText);
 		}
 
 		&:disabled {
@@ -1352,10 +1367,10 @@
    ============================================ */
 
 	:focus-visible {
-		outline-width: var(--focus-ring-width, 2px);
-		outline-style: var(--focus-ring-style, auto);
-		outline-color: var(--focus-ring-color, -webkit-focus-ring-color);
-		outline-offset: var(--focus-ring-offset, 0px);
+		outline-width: var(--focus-ring-width);
+		outline-style: var(--focus-ring-style);
+		outline-color: var(--focus-ring-color);
+		outline-offset: var(--focus-ring-offset);
 	}
 
 	::selection {
