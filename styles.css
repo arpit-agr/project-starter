@@ -635,13 +635,13 @@
 		text-wrap: pretty;
 	}
 
-	small {
-		font-size: var(--step--1, 0.8333em);
+	strong,
+	b {
+		font-weight: var(--font-weight-semibold, 600);
 	}
 
-	var {
-		font-style: normal;
-		font-weight: var(--font-weight-semibold, 600);
+	small {
+		font-size: var(--step--1, 0.8333em);
 	}
 
 	sub,
@@ -759,16 +759,16 @@
 		text-decoration-style: var(--link-decoration-style, solid);
 		text-decoration-color: var(--link-decoration-color, currentColor);
 		text-decoration-thickness: var(--link-decoration-thickness, auto);
-		text-underline-offset: var(--link-underline-offset);
+		text-underline-offset: var(--link-underline-offset, 0.1625em);
 
 		&:visited {
 			color: var(--link-color-text-visited, VisitedText);
 		}
 
 		&:hover {
-			text-decoration-style: var(--link-decoration-style-hover);
-			text-decoration-color: var(--link-decoration-color-hover);
-			text-decoration-thickness: var(--link-decoration-thickness-hover);
+			text-decoration-style: var(--link-decoration-style-hover, solid);
+			text-decoration-color: var(--link-decoration-color-hover, currentColor);
+			text-decoration-thickness: var(--link-decoration-thickness-hover, 3px);
 			text-decoration-skip-ink: none;
 		}
 
