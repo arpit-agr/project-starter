@@ -823,6 +823,7 @@
 	}
 
 	legend {
+		padding-inline: unset;
 		font-size: var(--step-1, 1.2rem);
 	}
 
@@ -841,7 +842,7 @@
 		}
 
 		input {
-			margin-inline-start: -0.5rem;
+			margin-inline-start: -0.625rem;
 			flex-shrink: 0;
 			inline-size: 2.75rem;
 			block-size: 2.75rem;
