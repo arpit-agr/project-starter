@@ -189,7 +189,7 @@
 			/*--btn-color-bg: light-dark();
 			--btn-color-bg-hover: light-dark();
 			--btn-color-text: light-dark();*/
-			--btn-border-width: var(--border-width-thin);
+			--btn-border-width: var(--border-width-thick);
 			--btn-border-style: var(--border-style);
 			/*--btn-border-color: light-dark();*/
 			--btn-radius: var(--radius-none);
