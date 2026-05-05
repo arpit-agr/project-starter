@@ -167,10 +167,7 @@
 			--link-decoration-style-hover: solid;
 			--link-decoration-color: oklch(from currentColor l c h / 0.9);
 			--link-decoration-color-hover: oklch(from currentColor l c h / 0.8);
-			--link-decoration-thickness: max(
-				var(--border-width-thin),
-				(0.0625 * 1rem)
-			);
+			--link-decoration-thickness: max(var(--border-width-thin), (0.0625 * 1rem));
 			--link-decoration-thickness-hover: max(
 				var(--border-width-thick),
 				3 * (0.0625 * 1rem),
@@ -221,11 +218,7 @@
 			--code-padding-inline: var(--space-4xs);
 			--code-border-width: var(--border-width-thin);
 			--code-border-style: var(--border-style);
-			--code-border-color: color-mix(
-				in oklch,
-				var(--color-text, currentColor) 5%,
-				#0000
-			);
+			--code-border-color: color-mix(in oklch, var(--color-text, currentColor) 5%, #0000);
 			--code-radius: var(--radius-none);
 			--code-color-bg: color-mix(in oklch, currentColor 5%, transparent);
 			--code-line-height: var(--leading-tight);
@@ -285,20 +278,25 @@
 		padding-block: var(--region-space, 1lh);
 	}
 
-	/*
-		VISUALLY HIDDEN UTILITY
-		Info: https://piccalil.li/quick-tip/visually-hidden/
-	*/
+	/* Visually hide text while keeping it accessible */
+	/* Source: https://www.scottohara.me/blog/2017/04/14/inclusively-hidden.html */
 
-	.visually-hidden {
-		border: 0;
-		clip: rect(0 0 0 0);
-		height: 0;
-		margin: 0;
-		overflow: hidden;
-		padding: 0;
-		position: absolute;
+	.visually-hidden:not(:focus):not(:active) {
+		/* shrink to a 1px square */
 		width: 1px;
+		height: 1px;
+
+		/* hide any resulting overflow */
+		overflow: hidden;
+
+		/* clip the element to remove any visual trace */
+		clip: rect(0 0 0 0); /* for IE only */
+		clip-path: inset(50%);
+
+		/* remove from page flow so it doesn’t affect surrounding layout */
+		position: absolute;
+
+		/* ensure proper text announcement by screen readers */
 		white-space: nowrap;
 	}
 }
@@ -770,8 +768,7 @@
 
 		&:focus-visible {
 			outline-color: #0000;
-			box-shadow: 0 var(--focus-ring-width, 3px)
-				var(--color-text-focus, canvasText);
+			box-shadow: 0 var(--focus-ring-width, 3px) var(--color-text-focus, canvasText);
 			background: var(--focus-ring-color);
 			color: var(--color-text-focus, canvasText);
 			text-decoration: none;
@@ -980,16 +977,12 @@
 
 		&::-webkit-color-swatch {
 			border: none;
-			border-radius: calc(
-				var(--fc-radius, 0.25rem) - var(--fc-border-width, 1px) * 3
-			);
+			border-radius: calc(var(--fc-radius, 0.25rem) - var(--fc-border-width, 1px) * 3);
 		}
 
 		&::-moz-color-swatch {
 			border: none;
-			border-radius: calc(
-				var(--fc-radius, 0.25rem) - var(--fc-border-width, 1px) * 3
-			);
+			border-radius: calc(var(--fc-radius, 0.25rem) - var(--fc-border-width, 1px) * 3);
 		}
 	}
 
@@ -1345,8 +1338,8 @@
 	td {
 		padding-block: var(--table-cell-padding-block, 0.25rem);
 		padding-inline: 0 var(--table-cell-padding-inline, 0.5rem);
-		border-block-end: var(--table-border-width, 1px)
-			var(--table-border-style, solid) var(--table-border-color, currentColor);
+		border-block-end: var(--table-border-width, 1px) var(--table-border-style, solid)
+			var(--table-border-color, currentColor);
 		text-align: start;
 		vertical-align: text-top;
 
